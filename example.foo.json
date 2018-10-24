@@ -1,0 +1,15 @@
+{
+    "content": [
+        {
+            "text": "sample",
+            "alignment": "aaa",
+            "style": "bbb"
+        }
+    ],
+    "styles": {
+        "header": {
+            "bold": 1,
+            "alignment": "aaa"
+        }
+    }    
+}

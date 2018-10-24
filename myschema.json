@@ -1,0 +1,100 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "content",
+    "styles"
+  ],
+  "properties": {
+    "content": {
+      "$id": "#/properties/content",
+      "type": "array",
+      "title": "The Content Schema",
+      "items": {
+        "$id": "#/properties/content/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "text",
+          "style",
+          "alignment"
+        ],
+        "properties": {
+          "text": {
+            "$id": "#/properties/content/items/properties/text",
+            "type": "string",
+            "title": "The Text Schema",
+            "default": "",
+            "examples": [
+              "This paragraph uses header style and extends the alignment property"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "style": {
+            "$id": "#/properties/content/items/properties/style",
+            "type": "string",
+            "title": "The Style Schema",
+            "default": "",
+            "examples": [
+              "header"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "alignment": {
+            "$id": "#/properties/content/items/properties/alignment",
+            "type": "string",
+            "title": "The Alignment Schema",
+            "default": "",
+            "examples": [
+              "center"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    },
+    "styles": {
+      "$id": "#/properties/styles",
+      "type": "object",
+      "title": "The Styles Schema",
+      "required": [
+        "header"
+      ],
+      "properties": {
+        "header": {
+          "$id": "#/properties/styles/properties/header",
+          "type": "object",
+          "title": "The Header Schema",
+          "required": [
+            "bold",
+            "alignment"
+          ],
+          "properties": {
+            "bold": {
+              "$id": "#/properties/styles/properties/header/properties/bold",
+              "type": "integer",
+              "title": "The Bold Schema",
+              "default": 0,
+              "examples": [
+                1
+              ]
+            },
+            "alignment": {
+              "$id": "#/properties/styles/properties/header/properties/alignment",
+              "type": "string",
+              "title": "The Alignment Schema",
+              "default": "",
+              "examples": [
+                "justify"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    }
+  }
+}
